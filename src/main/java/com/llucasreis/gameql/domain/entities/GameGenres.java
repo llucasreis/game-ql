@@ -24,4 +24,8 @@ public class GameGenres {
 
     @ManyToOne
     private Genre genre;
+
+    public Genre getGenre() {
+        return this.genre;
+    }
 }

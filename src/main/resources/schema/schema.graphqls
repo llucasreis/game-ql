@@ -1,7 +1,7 @@
-#type Genre {
-#    id: ID
-#    name: String
-#}
+type Genre {
+    id: ID
+    name: String
+}
 
 type Platform {
     id: ID
@@ -13,7 +13,7 @@ type Game {
     name: String
     releaseYear: Int
     platform: Platform
-#    genres: [Genre]
+    genres: [Genre]
 }
 
 type Query {
