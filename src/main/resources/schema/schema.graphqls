@@ -1,0 +1,25 @@
+#type Genre {
+#    id: ID
+#    name: String
+#}
+
+type Platform {
+    id: ID
+    name: String
+}
+
+type Game {
+    id: ID
+    name: String
+    releaseYear: Int
+    platform: Platform
+#    genres: [Genre]
+}
+
+type Query {
+    games(name: String): [Game]
+}
+
+type Mutation {
+    addPlatform(name: String): Platform
+}
