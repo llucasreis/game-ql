@@ -41,12 +41,12 @@ public class GameDataFetcher {
         return this.platformRepository.findById(game.getPlatform().getId()).orElse(null);
     }
 
-//    @DgsData(parentType = "Game", field = "genres")
-//    public CompletableFuture<Genre> genre(DgsDataFetchingEnvironment dfe) {
-//        DataLoader<Long, Genre> genreDataLoader = dfe.getDataLoader(GenreDataLoader.class);
-//
-//        Game game = dfe.getSource();
-//
-//        return genreDataLoader.load(game.getId());
-//    }
+    @DgsData(parentType = "Game", field = "genres")
+    public CompletableFuture<Genre> genre(DgsDataFetchingEnvironment dfe) {
+        DataLoader<Long, Genre> genreDataLoader = dfe.getDataLoader(GenreDataLoader.class);
+
+        Game game = dfe.getSource();
+
+        return genreDataLoader.load(game.getId());
+    }
 }
